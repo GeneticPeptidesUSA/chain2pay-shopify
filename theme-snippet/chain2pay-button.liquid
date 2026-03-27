@@ -1,0 +1,61 @@
+{% comment %}
+  Chain2Pay "Pay with Credit Card" button
+  Add to: Shopify Admin → Online Store → Themes → Edit code
+  Paste into: sections/main-product.liquid (or product-template.liquid)
+  Place it just after the {{ product.description }} output tag.
+{% endcomment %}
+
+{% assign product_lower = product.title | downcase %}
+
+{% if product_lower contains 'bpc-157' and product_lower contains 'tb-500' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/2IJFMjDS3M' %}
+{% elsif product_lower contains 'bpc-157' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/1xSJnKUi8n' %}
+{% elsif product_lower contains 'tb-500' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/j5mT9LNGBk' %}
+{% elsif product_lower contains 'nad' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/Qs6aVy9zGa' %}
+{% elsif product_lower contains 'glp-3' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/9LkIdzx8te' %}
+{% elsif product_lower contains 'cjc-1295' or product_lower contains 'ipamorelin' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/EIpwqiHoae' %}
+{% elsif product_lower contains 'epithalon' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/rHqFGeRrLe' %}
+{% elsif product_lower contains 'kisspeptin' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/4eVdbDkoCr' %}
+{% elsif product_lower contains 'dsip' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/gKjy0WSDtJ' %}
+{% elsif product_lower contains 'kpv' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/UuX8hOFDXW' %}
+{% elsif product_lower contains 'glow' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/4YFiH0SYnn' %}
+{% elsif product_lower contains 'selank' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/ODRsJN1l6r' %}
+{% elsif product_lower contains 'semax' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/3BI3rbAS8t' %}
+{% elsif product_lower contains 'bacteriostatic' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/IEgaKJ1ich' %}
+{% elsif product_lower contains 'mots-c' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/k8Wn7C8GUs' %}
+{% elsif product_lower contains 'ghk-cu' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/uQpGIhVoyN' %}
+{% elsif product_lower contains 'tesamorelin' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/4cxQiViZmS' %}
+{% elsif product_lower contains '5-amino-1mq' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/QR7eKghElh' %}
+{% elsif product_lower contains 'ss-31' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/g8ZirG48JW' %}
+{% elsif product_lower contains 'hexarelin' %}
+  {% assign chain2pay_url = 'https://chain2pay.cloud/pay/JSS0jab05E' %}
+{% endif %}
+
+{% if chain2pay_url %}
+<div style="margin-top:24px;text-align:center;">
+  <a href="{{ chain2pay_url }}"
+     target="_blank"
+     rel="noopener noreferrer"
+     style="display:inline-block;padding:14px 32px;background-color:#00bcd4;color:#ffffff;font-size:16px;font-weight:700;text-decoration:none;border-radius:6px;letter-spacing:0.3px;">
+    Pay with Credit Card
+  </a>
+</div>
+{% endif %}
